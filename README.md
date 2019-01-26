@@ -1,4 +1,4 @@
-# ChexMix
+# ChexMix 🥨
 
 This project will most assuredly never be finished, if ever even started... On the off-chance that
 this project does get farther than a repo and a simple readme, the goal would be to implement some

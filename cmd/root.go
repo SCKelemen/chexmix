@@ -13,11 +13,13 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "pyro",
-	Short: "🔥 A unified build and tool system",
-	Long: `🔥 Welcome to Pyro:
+	Use:   "chexmix",
+	Short: "🥨 A lightweight static analysis utility",
+	Long: `🥨 Welcome to ChexMix:
 
-Pyro is a unified build and tooling system.`,
+ChexMix is a simple utility for performing 
+static code analysis, targetting multiple
+languages, using microgrammars.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	//	Run: func(cmd *cobra.Command, args []string) { },

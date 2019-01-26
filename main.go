@@ -1,6 +1,6 @@
 package main
 
-import "github.com/SCKelemen/microchecks/cmd"
+import "github.com/SCKelemen/chexmix/cmd"
 
 func main() {
 	cmd.Execute()
