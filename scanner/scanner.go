@@ -1,36 +1,29 @@
 package scanner
 
-/*
 import (
+	"fmt"
 	"os"
 	"path/filepath"
-	//"filepath"
-) */
+)
 
 type Scanner struct {
 	Path  string
 	files []string
 }
 
-/*
-func New(path string) (Scanner, error) {
-
-	abs, err := filepath.Abs(path)
-	if err != nil {
-		return Scanner{}, err
-	}
-	fi, err := os.Stat(abs)
-	if err != nil {
-		return Scanner{}, err
-	}
-
-	if fi.IsDir() {
-		for _, item := range fi.
-	}
-	return Scanner{Path: path}, nil
+func New(path string) Scanner {
+	return Scanner{Path: path}
 }
 
 func (s Scanner) Scan() {
-
+	err := filepath.Walk(s.Path, func(path string, info os.FileInfo, err error) error {
+		s.files = append(s.files, path)
+		return nil
+	})
+	if err != nil {
+		panic(err)
+	}
+	for _, file := range s.files {
+		fmt.Println(file)
+	}
 }
-*/
