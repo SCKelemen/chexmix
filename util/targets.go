@@ -19,9 +19,7 @@ const (
 
 //go:generate stringer -type=Language
 
-func (l Language) String() string {
-	var lang string
-
+func (l Language) String() (lang string) {
 	switch l {
 	case Go:
 		lang = "Go"
@@ -50,6 +48,37 @@ func (l Language) String() string {
 	return lang
 }
 
-func ExtensionToLanguage(ext string) (Language, error) {
-	return Unknown, nil
+func ExtensionToLanguage(ext string) Language {
+	switch ext {
+	case ".go":
+		return Go
+	case ".cs":
+	case ".csproj":
+		return CSharp
+	case ".js":
+	case ".jsx":
+		return JavaScript
+	case ".ts":
+	case ".tsx":
+		return TypeScript
+	case ".java":
+		return Java
+	case ".scala":
+		return Scala
+	case ".kotlin":
+	case ".kt":
+	case ".ktm":
+	case ".kts":
+		return Kotlin
+	case ".swift":
+		return Swift
+	case ".ruby":
+	case ".rb":
+		return Ruby
+	case ".py":
+		return Python
+	default:
+		return Unknown
+	}
+	return Unknown
 }
