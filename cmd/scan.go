@@ -30,6 +30,6 @@ func init() {
 }
 
 func scanFunc(cmd *cobra.Command, args []string) {
-	scan := scanner.New("")
+	scan := scanner.New("/Users/samuel.kelemen/go/src/github.com/SCKelemen/chexmix")
 	scan.Scan()
 }
